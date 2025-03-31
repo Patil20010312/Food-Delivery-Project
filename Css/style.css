@@ -1,0 +1,361 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* CSS Variables */
+:root {
+    /* Color variables */
+    --black: #1f1f1f;
+    --white: #fff;
+    --yellow: #ffc554;
+    --deep-yellow: #ffc727;
+    --bg-yellow: #fffaf1;
+    --btn-yellow: #fff4d4;
+    --footer-yellow: #fff9e9;
+    --grey: #737373;
+
+    /* Box shadow variables */
+    --box-shadow: 0 0.5rem 1.5rem rgba(155, 142, 0, 0.397);
+    --box-shadow-header-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.094);
+    --box-shadow-card-btn: 0 0.5rem 1.5rem #fdd88f;
+
+    /* Transition variable */
+    --transition: all 0.2s linear;
+}
+
+/* Utility Class */
+.yellow {
+    color: var(--yellow);
+}
+
+.section-titles {
+    text-align: center;
+    font-size: 2rem;
+    background-color: var(--footer-yellow);
+    margin-bottom: 1.5rem;
+    position: sticky;
+    top: 70px;
+    z-index: 1;
+}
+
+.blur-effect {
+    backdrop-filter: blur(8px); /* Adjust the blur value as needed */
+    background-color: rgba(255, 255, 255, 0.7); 
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    height: 100%;
+}
+
+/* Section Styles */
+section {
+    padding: 2rem 7.5%;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 7%;
+    height: 5rem;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow-header-shadow);
+    z-index: 1000;
+}
+
+/* Logo and Navigation Styles */
+.logo {
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+.navBar a {
+    font-weight: 500;
+    font-size: 1.6rem;
+    transition: var(--transition);
+    padding: 1rem;
+    border-bottom: 2px solid transparent;
+}
+
+.navBar a:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.navBar a:hover {
+    color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    color: var(--yellow);
+    background-color: var(--btn-yellow);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    box-shadow: var(--box-shadow-card-btn);
+}
+
+/* Text Selection Style */
+::selection {
+    background-color: var(--footer-yellow);
+}
+
+/* Home Section Styles */
+.home {
+    background: var(--white);
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    height: 100vh;
+}
+
+.home .image img {
+    width: 100%;
+}
+
+.home .content h1 {
+    font-size: 5.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+p {
+    color: var(--grey);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+/* .add-to-cart-btn */
+.home-btn {
+    display: inline-block;
+    color: var(--white);
+    font-weight: 500;
+    border-radius: 0.5rem;
+    background-color: var(--deep-yellow);
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+
+.home-btn:hover {
+    background-color: var(--footer-yellow);
+    color: var(--black);
+}
+
+/* .add-to-cart-btn:hover */
+
+/* Cards Section Styles */
+
+.cards-container {
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.cards {
+    width: calc(23% - 20px);
+    height: 410px;
+    border: 2px solid var(--btn-yellow);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    transition: var(--transition);
+}
+
+.card-img {
+    width: 258px;
+    height: 195px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    transition: var(--transition);
+}
+
+.card-content {
+    text-align: center;
+    margin: 15px;
+}
+
+.product-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 77px;
+    max-height: 77px;
+    overflow: hidden;
+}
+
+.product-desc p {
+    padding: 8px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.product-price h3,
+.product-name h3 {
+    border-radius: 5px;
+    margin: 1rem 0;
+    transition: var(--transition);
+    background-color: var(--footer-yellow);
+}
+
+.cards:hover {
+    /* cursor: pointer; */
+    border-color: var(--yellow);
+    box-shadow: var(--box-shadow);
+}
+
+.spacer {
+    height: 100vh;
+}
+
+/* ==============try================ */
+
+::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fce49d; /* Thumb color */
+    border-radius: 100px;
+}
+
+/* ==============try================ */
+
+
+.seeMore-btn {
+    width: 100%; /* Make the container take full width */
+    text-align: center; /* Center the button within the container */
+  }
+
+  /* ===========About Section========== */
+
+  section.about {
+    height: 75vh;
+    background-color: var(--footer-yellow);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+  }
+  
+  .about .image img {
+    width: 450px;
+    margin: 0 auto;
+    
+  }
+  
+  .about .content h3 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about .content p {
+    color: var(--grey);
+    width: 90%;
+    margin-bottom: 3rem;
+  }
+  
+  /* ===========footer=========== */
+
+  .footer .top {
+    background-color: var(--white);
+    padding: 10rem 9%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  
+  .footer .top .links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+  }
+  /* =================================================== */
+  
+  .footer .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;
+    background-color: var(--deep-yellow);
+  }
+  
+  .footer .top .content p {
+    color: var(--grey);
+    margin-top: 2rem;
+    width: 90%;
+  }
+  
+  .footer .top .link h4 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer .top .link a {
+    display: inline-block;
+    color: var(--grey);
+    margin-bottom: 1rem;
+  }
+  
+  .footer .top .link span {
+    color: var(--grey);
+  }
+  
+  .footer .top .link a {
+    display: block;
+  }
+  
+  .footer .top .link div {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer .top .link div img {
+    margin-right: 1rem;
+  }
+  
+
+  
